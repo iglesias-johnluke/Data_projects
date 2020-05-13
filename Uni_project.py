@@ -170,7 +170,9 @@ class Show(Top_10):
         try:
             if sys.argv[2].lower() == 'show':
                 rank = 1
-                print(f'\nTop 10 Universities According to {self.titles[str(self.column)]}\n')
+                print('Top 10 Universities According to', end = ' ')
+                print(f'{self.titles[str(self.column)]}\n')
+           
                 for result in self.find():
                     print(str(rank) + '.', result)
                     rank +=1
